@@ -5,9 +5,9 @@
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15276-cnano-uart-io-expander-host-mplab-mcc",
         "version": " ",
-        "displayName": "",
+        "displayName": "UART IO Expander Host using PIC16F15276 microcontroller",
         "projectName": "pic16f15276-cnano-uart-io-expander-host-mplab-mcc",
-        "shortDescription": "This example highlights usage of PIC MCU as I O expander host where the MCU I O pins could be used by host MCU to extend its functionalities and communicate through UART interface Compatible PIC16F152xx family of MCUs are PIC16F15244 54 PIC16F15276",
+        "shortDescription": "This example highlights usage of PIC MCU as IO expander host where the MCU IO pins are used by host MCU to extend its functionalities and communicate through UART interface. Compatible PIC16F152xx family of MCUs are PIC16F15244, PIC16F15254, PIC16F15276",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=6.0.0"
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC16f1xxxx_DFP",
+            "semverRange": "^1.13.178"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": "^5.1.1"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,8 +37,16 @@
             }
         },
         "author": "Amey Panse",
-        "peripherals": [],
-        "keywords": [],
+        "peripherals": [
+			"EUSART",
+			"TMR2"
+		],
+        "keywords": [
+			"Melody",
+			"Curiosity Nano",
+			"Hardware Limit Timer",
+			"8/16-bit Timer"
+		],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
