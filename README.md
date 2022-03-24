@@ -48,7 +48,7 @@ An additional 8th LED is sometimes used within the same package thus allowing th
 Each one of the seven LEDs in the display is given a positional segment with one of its connection pins being brought straight out of the rectangular plastic package. These individual LED pins are labelled from a through to g representing each individual LED. The other LED pins are connected and wired to form a common pin. An additional 8th LED is sometimes used within the same package thus allowing the indication of a decimal point, (DP) when two or more 7-segment displays are connected to display numbers greater than ten.
 
 <p align="center">
-  <img width=600 height=auto src="images/ssd_diag.png">
+  <img width=auto height=auto src="images/ssd_diag.png">
   <br>Figure 2: SSD Segment Naming Conventions <br>
 </p>
 
@@ -78,7 +78,7 @@ Resistor ( R ) = (V<sub>in</sub> – V<sub>f</sub> ) / ( I<sub>f</sub> ) = 140 o
 ***Note: 330 or 470 ohms resistor will be used.***
 
 <p align="center">
-  <img width=600 height=auto src="images/ckt_diag.png">
+  <img width=auto height=auto src="images/ckt_diag.png">
   <br>Figure 3: SSD LED Resistor Driver Circuit <br>
 </p>
 
