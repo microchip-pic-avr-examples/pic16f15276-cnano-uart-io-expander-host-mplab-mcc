@@ -118,7 +118,7 @@ The following figure consists of populated PROTO Xplained Pro extension kit, Cur
   <br>Figure 4: Hardware Setup <br>
 </p>
 
-***Note: On the hardware setup, timer pin and the switch pin need to be shorted. (Connect RC3 and RB5 using jumper)***
+***Note: On the host hardware setup, timer pin and the switch pin need to be shorted. (Connect RC3 and RB5 using jumper)***
 
 ## Operation
 
