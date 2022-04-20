@@ -10,7 +10,7 @@ This code example demonstrates usage of PIC16F15276 microcontroller as a I/O exp
 
 The PIC16F152xx family of microcontrollers are available in packages for various embedded applications. The PIC16F15276 simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART). In real time applications, EUSART, can be configured as a full-duplex asynchronous system or half-duplex synchronous system. Full-Duplex mode is useful for communications with peripheral systems, such as CRT terminals and personal computers. Half-Duplex Synchronous mode is intended for communications with peripheral devices, such as A/D or D/A integrated circuits, serial EEPROMs or other microcontrollers. Several embedded applications use I/O expander to add the additional I/O pins required for the main microcontroller while interfacing standalone IC modules, display modules, for various features implementation. This code example demonstrates implementation of I/O Expander using EUSART peripheral and I/O pins of the PIC16F15276 microcontroller.
 
-Refer code example [UART I/O Expander: Client Implementation using PIC16F15276](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-uart-io-expander-client-mplab-mcc.git) for more details about the client device implementation.
+Refer code example [UART I/O Expander Implementation using PIC16F15276](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-uart-io-expander-client-mplab-mcc.git) for more details about the client device implementation.
 
 ## Related Documentation
 
@@ -118,7 +118,7 @@ The following figure consists of populated PROTO Xplained Pro extension kit, Cur
   <br>Figure 4: Hardware Setup <br>
 </p>
 
-***Note: On the host hardware setup, timer pin and the switch pin need to be shorted. (Connect RC3 and RB5 using jumper)***
+***Note: In order to use on-board mechanical switch, timer is used to avoid the debouncing. Thereby, timer input pin RC3 and pin RB5 (on-board switch), need to be shorted using a jumper. The usage of jumper is required as RB5 pin cannot be selected as timer input through PPS feature of the PIC16F15276 microcontroller.***
 
 ## Operation
 
