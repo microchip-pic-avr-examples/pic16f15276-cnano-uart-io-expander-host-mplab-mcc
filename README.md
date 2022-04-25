@@ -18,7 +18,7 @@ Refer code example [UART I/O Expander Implementation using PIC16F15276](https://
 - [PIC16F152xx MCU Family Product Brief](https://ww1.microchip.com/downloads/en/DeviceDoc/40002140A.pdf)
 - [How to use PIC16F15244 Family as an I/O Expander](https://www.microchip.com/en-us/about/blog/design-corner/how-to-use-the-pic16f15244-family-as-an-i-o-expander-for-more-de1)
 - [SPI I/O Expander using PIC16F15276 micrcocontroller](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-spi-io-expander-host-mplab-mcc.git)
-- [PIC16F15244 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples)
+- [PIC16F15244 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic16f152&type=all&language=&sort=)
 - [PIC16F152xx MCU Family Video](https://youtu.be/nHLv3Th-o-s)
 
 ## Description
