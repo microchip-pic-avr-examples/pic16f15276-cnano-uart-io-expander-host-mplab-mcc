@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15276-cnano-uart-io-expander-host-mplab-mcc",
-        "version": " ",
+        "version": "1.0.0",
         "displayName": "UART I/O Expander: Host Implementation using PIC16F15276",
         "projectName": "pic16f15276-cnano-uart-io-expander-host-mplab-mcc",
         "shortDescription": "This example highlights usage of PIC MCU as I/O expander using UART interface. The PIC16F15276 MCU acts as host and is used to control seven segment display. Compatible PIC16F152xx family of MCUs are: PIC16F15244, PIC16F15254, PIC16F15276.",
@@ -44,7 +44,7 @@
         "keywords": [
 			"Melody",
 			"Curiosity Nano",
-			"Hardware Limit Timer",
+			"HLT",
 			"8/16-bit Timer"
 		],
         "additionalData": {
