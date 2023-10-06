@@ -11,7 +11,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -59,7 +59,7 @@ int main(void)
 
     printf("\n\t EUSART HOST DEVICE \r\n\n");    
     
-    Timer2_OverflowCallbackRegister(TMR2_UserInterruptHandler);             // Used for switch press detection and avoid switch de-bouncing
+    TMR2_OverflowCallbackRegister(TMR2_UserInterruptHandler);             // Used for switch press detection and avoid switch de-bouncing
 
     while(1)
     {

@@ -24,7 +24,7 @@ void Application(void)
         button = STATE_READ;                        // Reset button state
         EUSART1_Write(START_7_SEG_DISP_LOOP);       // Send command to initiate communication
         LED_SetLow();                               // Toggle LED for visual indication
-        while(!EUSART1_IsRxReady());                // Check if transmit has happened successfully        
+        while(!EUSART1_IsTxReady());                // Check if transmit has happened successfully        
         __delay_ms(LED_HOLD_PERIOD);
         LED_SetHigh();
     }

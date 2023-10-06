@@ -12,7 +12,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -68,7 +68,6 @@
 #define IO_RB0_SetOpenDrain()       do { ODCONBbits.ODCB0 = 1; } while(0)
 #define IO_RB0_SetAnalogMode()      do { ANSELBbits.ANSB0 = 1; } while(0)
 #define IO_RB0_SetDigitalMode()     do { ANSELBbits.ANSB0 = 0; } while(0)
-
 // get/set IO_RB1 aliases
 #define IO_RB1_TRIS                 TRISBbits.TRISB1
 #define IO_RB1_LAT                  LATBbits.LATB1
@@ -88,7 +87,6 @@
 #define IO_RB1_SetOpenDrain()       do { ODCONBbits.ODCB1 = 1; } while(0)
 #define IO_RB1_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
 #define IO_RB1_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
-
 // get/set IO_RB5 aliases
 #define SW_TRIS                 TRISBbits.TRISB5
 #define SW_LAT                  LATBbits.LATB5
@@ -108,7 +106,6 @@
 #define SW_SetOpenDrain()       do { ODCONBbits.ODCB5 = 1; } while(0)
 #define SW_SetAnalogMode()      do { ANSELBbits.ANSB5 = 1; } while(0)
 #define SW_SetDigitalMode()     do { ANSELBbits.ANSB5 = 0; } while(0)
-
 // get/set IO_RC3 aliases
 #define IO_RC3_TRIS                 TRISCbits.TRISC3
 #define IO_RC3_LAT                  LATCbits.LATC3
@@ -128,7 +125,6 @@
 #define IO_RC3_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
 #define IO_RC3_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
 #define IO_RC3_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
-
 // get/set IO_RE2 aliases
 #define LED_TRIS                 TRISEbits.TRISE2
 #define LED_LAT                  LATEbits.LATE2
@@ -148,7 +144,6 @@
 #define LED_SetOpenDrain()       do { ODCONEbits.ODCE2 = 1; } while(0)
 #define LED_SetAnalogMode()      do { ANSELEbits.ANSE2 = 1; } while(0)
 #define LED_SetDigitalMode()     do { ANSELEbits.ANSE2 = 0; } while(0)
-
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization

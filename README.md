@@ -8,7 +8,7 @@ This code example demonstrates usage of PIC16F15276 microcontroller as a I/O exp
 
 ## Introduction
 
-The PIC16F152xx family of microcontrollers are available in packages for various embedded applications. The PIC16F15276 simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART). In real time applications, EUSART, can be configured as a full-duplex asynchronous system or half-duplex synchronous system. Full-Duplex mode is useful for communications with peripheral systems, such as CRT terminals and personal computers. Half-Duplex Synchronous mode is intended for communications with peripheral devices, such as A/D or D/A integrated circuits, serial EEPROMs or other microcontrollers. Several embedded applications use I/O expander to add the additional I/O pins required for the main microcontroller while interfacing standalone IC modules, display modules, for various features implementation. This code example demonstrates implementation of I/O Expander using EUSART peripheral and I/O pins of the PIC16F15276 microcontroller.
+The PIC16F152xx family of microcontrollers are available in packages for various embedded applications. The PIC16F15276 simplified feature set includes Peripheral Pin Select (PPS), digital communication peripherals, timers, Enhanced Universal Synchronous Asynchronous Receiver Transmitter (EUSART). In real time applications, EUSART can be configured as a full-duplex asynchronous system or half-duplex synchronous system. Full-Duplex mode is useful for communications with peripheral systems, such as CRT terminals and personal computers. Half-Duplex Synchronous mode is intended for communications with peripheral devices, such as A/D or D/A integrated circuits, serial EEPROMs or other microcontrollers. Several embedded applications use I/O expander to add the additional I/O pins required for the main microcontroller while interfacing standalone IC modules, display modules, for various features implementation. This code example demonstrates implementation of I/O Expander using EUSART peripheral and I/O pins of the PIC16F15276 microcontroller.
 
 Refer code example [UART I/O Expander Implementation using PIC16F15276](https://github.com/microchip-pic-avr-examples/pic16f15276-cnano-uart-io-expander-client-mplab-mcc.git) for more details about the client device implementation.
 
@@ -23,7 +23,7 @@ Refer code example [UART I/O Expander Implementation using PIC16F15276](https://
 
 ## Description
 
-In this code example, host microcontroller expects to display the numbers on Seven Segment Display (SSD). To interface SSD with the host device, it requires minimum 7 general purpose I/O pins. To minimize the usage of I/O pins on host, a secondary microcontroller is used as client for driving the SSD and, UART serial communication interface is used for communication between both the host and client devices. To establish communication between host device and client device UART serial communication interface is used.
+In this code example, host microcontroller expects to display the numbers on Seven Segment Display (SSD). To interface SSD with the host device, it requires minimum 7 general purpose I/O pins. To minimize the usage of I/O pins on host, a secondary microcontroller is used as client for driving the SSD and, UART serial communication interface to communicate between the host and client device. To establish communication between the host and client device, UART serial communication interface is used.
 
 For the ease of demonstration, this code example uses PIC16F15276 microcontroller as host microcontroller and another PIC16F15276 microcontroller as client microcontroller. Also, the code example uses PIC16F15276 Curiosity nano development boards for the demonstration.
 
@@ -86,18 +86,18 @@ Resistor ( R ) = (V<sub>in</sub> – V<sub>f</sub> ) / ( I<sub>f</sub> ) = 140 o
 
 Microchip’s free IDE, compiler and graphical code generators are used throughout the application firmware development. Following are the tools used for this demo application:
 
-* MPLAB® X IDE [v6.00.0 or newer](https://www.microchip.com/mplab/mplab-x-ide)
-* XC8 Compiler [v2.36.0 or newer](https://www.microchip.com/mplab/compilers)
-* MPLAB Code Configurator (MCC) [v5.0.3](https://www.microchip.com/mplab/mplab-code-configurator)
-* UART MCC Melody driver 1.6.0
-* Microchip PIC16F1xxxx Series Device Support [1.9.163 or newer](https://packs.download.microchip.com/)
+* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) 6.15.0 or newer
+* [MPLAB® XC8 Compiler](https://www.microchip.com/mplab/compilers) 2.45.0 or newer
+* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) 5.3.7 or newer
+* [Microchip PIC16F1xxxx_DFP Device Support](https://packs.download.microchip.com/) 1.21.368 or newer pack
+* ESUART MCC Melody driver 7.1.5
 
 ***Note: For running the demo, the installed tool versions should be the same or later. This example is not tested with the previous versions.***
 
 ## Hardware Used
 
-* [PIC16F15244 Curiosity Nano](https://www.microchip.com/en-us/product/PIC16F15244 "PIC16F15244 Curiosity Nano")
-* [Curiosity Nano Base for Click boards](https://www.microchip.com/developmenttools/ProductDetails/AC164162 "Curiosity Nano Base for Click boards")
+* [PIC16F15276 Curiosity Nano Board](https://www.microchip.com/en-us/development-tool/EV35F40A)
+* [Curiosity Nano Base for Click Boards<sup>TM</sup>](https://www.microchip.com/en-us/development-tool/AC164162)
 * [PROTO Xplained Pro Extension Kit](https://www.microchip.com/en-us/development-tool/ATPROTO1-XPRO "PROTO Xplained Pro Extension Kit")
 * Seven Segment Display
 
@@ -118,7 +118,7 @@ The following figure consists of populated PROTO Xplained Pro extension kit, Cur
   <br>Figure 4: Hardware Setup <br>
 </p>
 
-***Note: In order to use on-board mechanical switch, timer is used to avoid the debouncing. Thereby, timer input pin RC3 and pin RB5 (on-board switch), need to be shorted using a jumper. The usage of jumper is required as RB5 pin cannot be selected as timer input through PPS feature of the PIC16F15276 microcontroller.***
+***Note: In order to use on-board mechanical switch on host device, timer is used to avoid the debouncing. Thereby, timer input pin RC3 and pin RB5 (on-board switch), need to be shorted using a jumper. The usage of jumper is required as RB5 pin cannot be selected as timer input through PPS feature of the PIC16F15276 microcontroller.***
 
 ## Operation
 
@@ -135,12 +135,12 @@ In many real-world embedded applications, the microcontroller requires to interf
 
 ## Appendix
 
-MCC – MPLAB<sup>®</sup> Code Configurator is a graphical programming environment that generates seamless, easy to understand C code to give a head start to the project, saving the designer’s time to initialize and configure all the modules, and to go through the datasheets. Using an instructive interface, it enables and configures all peripherals and functions specific to the application requirements.
+MPLAB<sup>®</sup> Code Configurator is a graphical programming environment that generates seamless, easy to understand C code to give a head start to the project, saving the designer’s time to initialize and configure all the modules, and to go through the datasheets. Using an instructive interface, it enables and configures all peripherals and functions specific to the application requirements.
 
 **Start by creating a new Project and open MCC**
-- Go to File > New Project
-- Select Microchip Embedded > Standalone Project
-- Enter the device name. In this case, select PIC16F15276 device
+- Go to **File** and click **New Project**
+- Select **Microchip Embedded** and click **Standalone Project**
+- Enter the device name, in this case, PIC16F15276
 - Name the project
 - Launch MCC tool by navigating to ***“Tools -> Embedded -> MPLAB Code Configurator v4: Open/Close”*** . Alternatively, click the MCC icon to launch the MCC tool.
 
@@ -148,15 +148,14 @@ MCC – MPLAB<sup>®</sup> Code Configurator is a graphical programming environm
 
 - Configure Clock
 
-  Open "Clock Control" setup present under "System" dropdown menu in "Project Resources" tab. Host and the client device will be configured with same configuration as given below.
+  Open **Clock Control** setup present under "System" dropdown menu in **Project Resources** tab. Host and the client device will be configured with same configuration as given below.
 
-  Set "Clock Source" as "HFINTOSC"
--- Set "HF Internal Clock" as "8_MHz"
--- Enable low power programming checkbox
+  - Set Clock Source as HFINTOSC
+  - Set HF Internal Clock as 8_MHz
 
-The system configuration window of MCC is used for MCU oscillator, Watchdog timer and low voltage programming configuration. The Watchdog timer is disabled in the application.
+The **configurations Bits**(**Project Resources** -> **System**) window in MCC is used for MCU oscillator, Watchdog timer and low voltage programming configuration. The Watchdog timer is disabled in the application.
 
-The following figure shows the system configuration setting in MCC tool.
+The following figure shows the clock configuration setting in MCC tool.
 
 <p align="center">
   <img width=600 height=auto src="images/clk_config.png">
@@ -165,17 +164,17 @@ The following figure shows the system configuration setting in MCC tool.
 
 - Timer 2 Configuration
 
-Configure Timer2 in HLT mode for switch debouncing functionality with the following configuration.
+  Configure Timer2 in HLT mode for switch debouncing functionality with the following configuration.
 
--- Enable Timer checkbox
--- Control Mode – Monostable
--- Ext Reset – T2INPPS
--- Start/Reset Option – Start on rising edge on TMR2_ers
--- Clock Source – MFINTOSC 31.25kHz
--- Polarity – Rising Edge
--- Prescaler – 1:16, Postscaler – 1:1
--- Time Period – 100ms 
--- Enable Timer Interrupt checkbox
+ - Enable Timer checkbox
+ - Control Mode – Monostable
+ - Ext Reset – T2INPPS
+ - Start/Reset Option – Start on rising edge on TMR2_ers
+ - Clock Source – MFINTOSC 31.25kHz
+ - Polarity – Rising Edge
+ - Prescaler – 1:16, Postscaler – 1:1
+ - Time Period – 100ms
+ - Enable Timer Interrupt checkbox
 
 <p align="center">
   <img width=600 height=auto src="images/tmr_config.png">
